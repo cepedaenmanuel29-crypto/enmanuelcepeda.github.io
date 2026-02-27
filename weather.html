@@ -7,35 +7,47 @@
 <style>
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
     text-align: center;
+    margin: 0;
 }
 
 h1 {
+    padding: 20px;
+    color: navy;
+}
+
+/* Top continent navigation */
+.top-links {
     margin-bottom: 20px;
 }
 
-/* Top continent links */
 .top-links a {
     text-decoration: none;
-    margin: 0 20px;
-    padding: 5px 10px;
-    color: black;
+    margin: 0 25px;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: darkblue;
+    border-radius: 5px;
 }
 
 .top-links a:hover {
     background-color: silver;
 }
 
-/* Picture */
+/* Weather image */
 img {
-    width: 500px;
-    margin: 20px 0;
+    width: 600px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    margin-bottom: 30px;
 }
 
-/* CSS Table Layout */
+/* CSS table layout */
 .container {
     display: table;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
 }
 
 .row {
@@ -44,27 +56,34 @@ img {
 
 .cell {
     display: table-cell;
-    padding: 15px 40px;
+    padding: 20px 50px;
     vertical-align: top;
+}
+
+/* Continent titles */
+.cell h3 {
+    color: darkred;
 }
 
 /* City links */
 .cell a {
     text-decoration: none;
     display: block;
-    margin: 5px 0;
-    color: blue;
+    margin: 8px 0;
+    color: darkgreen;
+    font-weight: bold;
 }
 
 .cell a:hover {
     background-color: silver;
+    border-radius: 5px;
 }
 </style>
 
 </head>
 <body>
 
-<h1>World Weather</h1>
+<h1>World Weather Forecast</h1>
 
 <div class="top-links">
     <a href="#africa">Africa</a>
@@ -72,32 +91,31 @@ img {
     <a href="#southamerica">South America</a>
 </div>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Clouds_over_the_Atlantic_Ocean.jpg" alt="Weather Image">
+<!-- Weather-style world image -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Earth_Western_Hemisphere.jpg" alt="World Weather Map">
 
 <div class="container">
+<div class="row">
 
-    <div class="row">
-        
-        <div class="cell" id="africa">
-            <h3>Africa</h3>
-            <a href="https://www.weather.com/weather/today/l/Cairo+Egypt" target="_blank">Cairo</a>
-            <a href="https://www.weather.com/weather/today/l/Nairobi+Kenya" target="_blank">Nairobi</a>
-        </div>
+<div class="cell" id="africa">
+    <h3>Africa</h3>
+    <a href="https://www.weather.com/weather/today/l/Cairo+Egypt" target="_blank">Cairo</a>
+    <a href="https://www.weather.com/weather/today/l/Cape+Town+South+Africa" target="_blank">Cape Town</a>
+</div>
 
-        <div class="cell" id="australia">
-            <h3>Australia</h3>
-            <a href="https://www.weather.com/weather/today/l/Sydney+Australia" target="_blank">Sydney</a>
-            <a href="https://www.weather.com/weather/today/l/Melbourne+Australia" target="_blank">Melbourne</a>
-        </div>
+<div class="cell" id="australia">
+    <h3>Australia</h3>
+    <a href="https://www.weather.com/weather/today/l/Sydney+Australia" target="_blank">Sydney</a>
+    <a href="https://www.weather.com/weather/today/l/Brisbane+Australia" target="_blank">Brisbane</a>
+</div>
 
-        <div class="cell" id="southamerica">
-            <h3>South America</h3>
-            <a href="https://www.weather.com/weather/today/l/Bogota+Colombia" target="_blank">Bogotá</a>
-            <a href="https://www.weather.com/weather/today/l/Lima+Peru" target="_blank">Lima</a>
-        </div>
+<div class="cell" id="southamerica">
+    <h3>South America</h3>
+    <a href="https://www.weather.com/weather/today/l/Bogota+Colombia" target="_blank">Bogotá</a>
+    <a href="https://www.weather.com/weather/today/l/Santiago+Chile" target="_blank">Santiago</a>
+</div>
 
-    </div>
-
+</div>
 </div>
 
 </body>
