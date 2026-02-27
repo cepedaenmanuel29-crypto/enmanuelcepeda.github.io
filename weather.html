@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>World Weather</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Top continent links */
+.top-links a {
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 5px 10px;
+    color: black;
+}
+
+.top-links a:hover {
+    background-color: silver;
+}
+
+/* Picture */
+img {
+    width: 500px;
+    margin: 20px 0;
+}
+
+/* CSS Table Layout */
+.container {
+    display: table;
+    margin: 0 auto;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    padding: 15px 40px;
+    vertical-align: top;
+}
+
+/* City links */
+.cell a {
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    color: blue;
+}
+
+.cell a:hover {
+    background-color: silver;
+}
+</style>
+
+</head>
+<body>
+
+<h1>World Weather</h1>
+
+<div class="top-links">
+    <a href="#africa">Africa</a>
+    <a href="#australia">Australia</a>
+    <a href="#southamerica">South America</a>
+</div>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Clouds_over_the_Atlantic_Ocean.jpg" alt="Weather Image">
+
+<div class="container">
+
+    <div class="row">
+        
+        <div class="cell" id="africa">
+            <h3>Africa</h3>
+            <a href="https://www.weather.com/weather/today/l/Cairo+Egypt" target="_blank">Cairo</a>
+            <a href="https://www.weather.com/weather/today/l/Nairobi+Kenya" target="_blank">Nairobi</a>
+        </div>
+
+        <div class="cell" id="australia">
+            <h3>Australia</h3>
+            <a href="https://www.weather.com/weather/today/l/Sydney+Australia" target="_blank">Sydney</a>
+            <a href="https://www.weather.com/weather/today/l/Melbourne+Australia" target="_blank">Melbourne</a>
+        </div>
+
+        <div class="cell" id="southamerica">
+            <h3>South America</h3>
+            <a href="https://www.weather.com/weather/today/l/Bogota+Colombia" target="_blank">Bogotá</a>
+            <a href="https://www.weather.com/weather/today/l/Lima+Peru" target="_blank">Lima</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
