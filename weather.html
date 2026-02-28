@@ -2,33 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>World Weather</title>
+<title>Global Weather Center</title>
 
 <style>
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
     text-align: center;
     margin: 0;
+    padding: 20px;
 }
 
 h1 {
-    padding: 20px;
-    color: navy;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 20px;
 }
 
 /* Top continent navigation */
 .top-links {
-    margin-bottom: 20px;
+    margin: 20px 0 30px 0;
 }
 
 .top-links a {
     text-decoration: none;
-    margin: 0 25px;
-    padding: 8px 15px;
+    margin: 0 20px;
+    padding: 10px 20px;
     font-weight: bold;
-    color: darkblue;
+    color: #003d82;
     border-radius: 5px;
+    display: inline-block;
+    background-color: #e0e0e0;
 }
 
 .top-links a:hover {
@@ -37,17 +45,19 @@ h1 {
 
 /* Weather image */
 img {
-    width: 600px;
-    max-width: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
-    margin-bottom: 30px;
+    width: 650px;
+    max-width: 95%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
 }
 
 /* CSS table layout */
 .container {
     display: table;
-    margin: 0 auto 40px auto;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 900px;
 }
 
 .row {
@@ -56,67 +66,82 @@ img {
 
 .cell {
     display: table-cell;
-    padding: 20px 50px;
+    padding: 30px 40px;
     vertical-align: top;
+    border-right: 1px solid #ddd;
+}
+
+.cell:last-child {
+    border-right: none;
 }
 
 /* Continent titles */
 .cell h3 {
-    color: darkred;
+    color: #1565a0;
+    margin-top: 0;
+    border-bottom: 3px solid #1565a0;
+    padding-bottom: 10px;
 }
 
 /* City links */
 .cell a {
     text-decoration: none;
     display: block;
-    margin: 8px 0;
-    color: darkgreen;
+    margin: 12px 0;
+    color: #0277bd;
     font-weight: bold;
+    padding: 8px;
 }
 
 .cell a:hover {
-    background-color: silver;
-    border-radius: 5px;
+    background-color: #e3f2fd;
+    border-radius: 4px;
 }
 </style>
 
 </head>
 <body>
 
-<h1>World Weather Forecast</h1>
+<h1>Global Weather Center</h1>
+<p class="subtitle">Check current weather conditions worldwide</p>
 
 <div class="top-links">
     <a href="#africa">Africa</a>
-    <a href="#australia">Australia</a>
+    <a href="#europe">Europe</a>
     <a href="#southamerica">South America</a>
 </div>
 
-<!-- Weather-style world image -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Earth_Western_Hemisphere.jpg" alt="World Weather Map">
+<!-- Weather satellite image -->
+<img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=650" alt="Weather Radar">
 
 <div class="container">
 <div class="row">
 
 <div class="cell" id="africa">
     <h3>Africa</h3>
-    <a href="https://www.weather.com/weather/today/l/Cairo+Egypt" target="_blank">Cairo</a>
-    <a href="https://www.weather.com/weather/today/l/Cape+Town+South+Africa" target="_blank">Cape Town</a>
+    <a href="https://weather.com/weather/today/l/EGXX0019:1:EG" target="_blank">Cairo, Egypt</a>
+    <a href="https://weather.com/weather/today/l/NGXX0010:1:NG" target="_blank">Lagos, Nigeria</a>
+    <a href="https://weather.com/weather/today/l/ZAXX0018:1:ZA" target="_blank">Cape Town, South Africa</a>
 </div>
 
-<div class="cell" id="australia">
-    <h3>Australia</h3>
-    <a href="https://www.weather.com/weather/today/l/Sydney+Australia" target="_blank">Sydney</a>
-    <a href="https://www.weather.com/weather/today/l/Brisbane+Australia" target="_blank">Brisbane</a>
+<div class="cell" id="europe">
+    <h3>Europe</h3>
+    <a href="https://weather.com/weather/today/l/FRXX0076:1:FR" target="_blank">Paris, France</a>
+    <a href="https://weather.com/weather/today/l/DEXX0080:1:DE" target="_blank">Berlin, Germany</a>
+    <a href="https://weather.com/weather/today/l/ESXX0208:1:ES" target="_blank">Barcelona, Spain</a>
 </div>
 
 <div class="cell" id="southamerica">
     <h3>South America</h3>
-    <a href="https://www.weather.com/weather/today/l/Bogota+Colombia" target="_blank">Bogotá</a>
-    <a href="https://www.weather.com/weather/today/l/Santiago+Chile" target="_blank">Santiago</a>
+    <a href="https://weather.com/weather/today/l/BRXX0116:1:BR" target="_blank">São Paulo, Brazil</a>
+    <a href="https://weather.com/weather/today/l/PEXX0029:1:PE" target="_blank">Lima, Peru</a>
+    <a href="https://weather.com/weather/today/l/ARXX0009:1:AR" target="_blank">Buenos Aires, Argentina</a>
 </div>
 
 </div>
 </div>
 
+</body>
+</html>
 </body>
 </html>
