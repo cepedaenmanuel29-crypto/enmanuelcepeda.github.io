@@ -2,124 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Animal Alphabet - A to E</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-    
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/3069/3069172.png">
+    <title>Animal Alphabet - A to E</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/616/616408.png">
 
     <style>
         body {
-            font-family: 'Fredoka', sans-serif;
+            font-family: 'Fredoka One', cursive;
+            background-color: #e0f7fa;
             text-align: center;
-            background-color: #fff9e6; /* Color crema suave */
-            color: #333;
             margin: 0; padding: 20px;
         }
 
-        /* Nav: Sin subrayado y con cambio de fondo al pasar el mouse (Hover) */
-        nav { margin-bottom: 40px; padding: 20px; background: white; border-radius: 50px; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        /* Nav: Sin subrayado y con hover de fondo */
+        nav { margin-bottom: 30px; font-size: 30px; }
         nav a {
-            text-decoration: none; /* Requisito: Sin subrayado */
-            font-size: 28px;
-            font-weight: bold;
-            color: #ff6f61;
-            padding: 10px 20px;
-            border-radius: 20px;
+            text-decoration: none; /* Requisito */
+            color: #ef6c00;
+            padding: 10px 15px;
             transition: 0.3s;
         }
         nav a:hover {
-            background-color: #4b86b4; /* Requisito: Cambio de color al hover */
-            color: white;
+            background-color: #ffffff; /* Requisito */
+            border-radius: 15px;
         }
 
-        /* GRID LAYOUT: 3 celdas por fila (Requisito) */
-        .animal-grid {
+        /* GRID: 3 celdas por fila */
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 25px;
-            max-width: 1200px;
+            grid-template-columns: repeat(3, 1fr); /* Requisito */
+            gap: 20px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .card {
             background: white;
-            border-radius: 25px;
-            padding: 20px;
-            border: 5px solid #ffcc00;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            padding: 15px;
+            border: 4px solid #ffa726;
         }
 
-        .animal-img {
+        .card img {
             width: 100%;
-            height: 180px;
+            height: 150px;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 10px;
         }
 
-        audio { width: 100%; margin-top: 10px; }
+        .icon-small { width: 40px !important; height: 40px !important; margin-top: 10px; }
 
-        .status-icon { width: 40px; margin-top: 10px; }
-
-        footer { margin-top: 50px; }
-        .back-btn {
-            text-decoration: none;
-            background: #ff6f61;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: bold;
-        }
+        footer { margin-top: 40px; }
+        .top-link { text-decoration: none; color: #00796b; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <header id="top">
-        <h1>🦁 Animal Alphabet 🐘</h1>
+        <h1>Animal Alphabet</h1>
         <nav>
-            <a href="#animal-a">A</a> | <a href="#animal-b">B</a> | 
-            <a href="#animal-c">C</a> | <a href="#animal-d">D</a> | <a href="#animal-e">E</a>
+            <a href="#a">A</a> | <a href="#b">B</a> | <a href="#c">C</a> | <a href="#d">D</a> | <a href="#e">E</a>
         </nav>
     </header>
 
-    <main class="animal-grid">
-        
-        <section id="animal-a" class="card">
-            <h2>A is for Anteater</h2>
-            <img src="https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=400" alt="Anteater" class="animal-img">
-            <audio controls><source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"></audio>
+    <div class="grid-container">
+        <section id="a" class="card">
+            <h3>A is for Anteater</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Giant_Anteater_12.jpg/640px-Giant_Anteater_12.jpg" alt="Anteater">
+            <audio controls><source src="https://upload.wikimedia.org/wikipedia/commons/5/52/A_vivid_sound_of_nature_in_the_wetlands.mp3"></audio>
         </section>
 
-        <section id="animal-b" class="card">
-            <h2>B is for Bear</h2>
-            <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=400" alt="Bear" class="animal-img">
-            <audio controls><source src="https://www.soundjay.com/nature/sounds/rain-01.mp3" type="audio/mpeg"></audio>
+        <section id="b" class="card">
+            <h3>B is for Bear</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/640px-2010-kodiak-bear-1.jpg" alt="Bear">
+            <audio controls><source src="https://assets.mixkit.co/active_storage/sfx/2232/2232-preview.mp3"></audio>
         </section>
 
-        <section id="animal-c" class="card">
-            <h2>C is for Cat</h2>
-            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400" alt="Cat" class="animal-img">
-            <audio controls><source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"></audio>
+        <section id="c" class="card">
+            <h3>C is for Cat</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/640px-Cat03.jpg" alt="Cat">
+            <audio controls><source src="https://assets.mixkit.co/active_storage/sfx/428/428-preview.mp3"></audio>
         </section>
 
-        <section id="animal-d" class="card">
-            <h2>D is for Dog</h2>
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400" alt="Dog" class="animal-img">
-            <audio controls><source src="https://www.soundjay.com/nature/sounds/river-1.mp3" type="audio/mpeg"></audio>
+        <section id="d" class="card">
+            <h3>D is for Dog</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/German_Shepherd_-_DSC_0346_%2810096362833%29.jpg/640px-German_Shepherd_-_DSC_0346_%2810096362833%29.jpg" alt="Dog">
+            <audio controls><source src="https://assets.mixkit.co/active_storage/sfx/2230/2230-preview.mp3"></audio>
         </section>
 
-        <section id="animal-e" class="card">
-            <h2>E is for Elephant</h2>
-            <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400" alt="Elephant" class="animal-img">
-            <p>Sound coming soon!</p>
-            <img src="https://cdn-icons-png.flaticon.com/128/3159/3159424.png" class="status-icon" alt="Under Construction">
+        <section id="e" class="card">
+            <h3>E is for Elephant</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/640px-African_Bush_Elephant.jpg" alt="Elephant">
+            <audio controls><source src="https://assets.mixkit.co/active_storage/sfx/1018/1018-preview.mp3"></audio>
+            <br><img src="https://cdn-icons-png.flaticon.com/128/3159/3159424.png" class="icon-small" alt="under construction">
         </section>
-
-    </main>
+    </div>
 
     <footer>
-        <p><a href="#top" class="back-btn">⬆️ Back to the top</a></p>
+        <a href="#top" class="top-link">Back to the top of the page</a>
     </footer>
 
 </body>
