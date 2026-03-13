@@ -1,0 +1,40 @@
+/* 1. The Grid: 3 cells per row */
+.animal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* This creates 3 equal columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* 2. Remove underlines from links */
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: blue;
+}
+
+/* 3. Hover effect (Background change) */
+nav a:hover {
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+/* 4. Making it "Aesthetically Pleasing" */
+body {
+    font-family: 'Comic Sans MS', cursive; /* A basic kid-friendly font */
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+.card {
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    background: white;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
