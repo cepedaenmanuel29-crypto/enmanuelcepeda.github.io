@@ -1,106 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Animal Alphabet - A to E</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/616/616408.png">
+<meta charset="UTF-8">
+<title>Animal Alphabet - A to E</title>
 
-    <style>
-        body {
-            font-family: 'Fredoka One', cursive;
-            background-color: #e0f7fa;
-            text-align: center;
-            margin: 0; padding: 20px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/616/616408.png">
 
-        /* Nav: Sin subrayado y con hover de fondo */
-        nav { margin-bottom: 30px; font-size: 30px; }
-        nav a {
-            text-decoration: none; /* Requisito */
-            color: #ef6c00;
-            padding: 10px 15px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            background-color: #ffffff; /* Requisito */
-            border-radius: 15px;
-        }
+<style>
 
-        /* GRID: 3 celdas por fila */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Requisito */
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+body{
+font-family:'Fredoka One', cursive;
+background-color:#e0f7fa;
+text-align:center;
+margin:0;
+padding:20px;
+}
 
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 15px;
-            border: 4px solid #ffa726;
-        }
+/* NAVIGATION */
+nav{
+margin-bottom:30px;
+font-size:30px;
+}
 
-        .card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+nav a{
+text-decoration:none;
+color:#ef6c00;
+padding:10px 15px;
+transition:0.3s;
+}
 
-        .icon-small { width: 40px !important; height: 40px !important; margin-top: 10px; }
+nav a:hover{
+background-color:white;
+border-radius:15px;
+}
 
-        footer { margin-top: 40px; }
-        .top-link { text-decoration: none; color: #00796b; font-weight: bold; }
-    </style>
+/* GRID */
+.grid-container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+/* CARD */
+.card{
+background:white;
+border-radius:20px;
+padding:15px;
+border:4px solid #ffa726;
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:10px;
+}
+
+audio{
+margin-top:10px;
+width:100%;
+}
+
+/* small icon */
+.icon-small{
+width:40px;
+margin-top:10px;
+}
+
+/* footer */
+footer{
+margin-top:40px;
+}
+
+.top-link{
+text-decoration:none;
+color:#00796b;
+font-weight:bold;
+}
+
+</style>
 </head>
+
 <body>
 
-    <header id="top">
-        <h1>Animal Alphabet</h1>
-        <nav>
-            <a href="#a">A</a> | <a href="#b">B</a> | <a href="#c">C</a> | <a href="#d">D</a> | <a href="#e">E</a>
-        </nav>
-    </header>
+<header id="top">
+<h1>Animal Alphabet</h1>
 
-    <div class="grid-container">
-        <section id="a" class="card">
-            <h3>A is for Anteater</h3>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Giant_Anteater_12.jpg/640px-Giant_Anteater_12.jpg" alt="Anteater">
-            <audio controls><source src="https://upload.wikimedia.org/wikipedia/commons/5/52/A_vivid_sound_of_nature_in_the_wetlands.mp3"></audio>
-        </section>
+<nav>
+<a href="#a">A</a> |
+<a href="#b">B</a> |
+<a href="#c">C</a> |
+<a href="#d">D</a> |
+<a href="#e">E</a>
+</nav>
 
-        <section id="b" class="card">
-            <h3>B is for Bear</h3>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/640px-2010-kodiak-bear-1.jpg" alt="Bear">
-            <audio controls><source src="https://assets.mixkit.co/active_storage/sfx/2232/2232-preview.mp3"></audio>
-        </section>
+</header>
 
-        <section id="c" class="card">
-            <h3>C is for Cat</h3>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/640px-Cat03.jpg" alt="Cat">
-            <audio controls><source src="https://assets.mixkit.co/active_storage/sfx/428/428-preview.mp3"></audio>
-        </section>
+<div class="grid-container">
 
-        <section id="d" class="card">
-            <h3>D is for Dog</h3>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/German_Shepherd_-_DSC_0346_%2810096362833%29.jpg/640px-German_Shepherd_-_DSC_0346_%2810096362833%29.jpg" alt="Dog">
-            <audio controls><source src="https://assets.mixkit.co/active_storage/sfx/2230/2230-preview.mp3"></audio>
-        </section>
+<!-- A -->
+<section id="a" class="card">
+<h3>A is for Anteater</h3>
 
-        <section id="e" class="card">
-            <h3>E is for Elephant</h3>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/640px-African_Bush_Elephant.jpg" alt="Elephant">
-            <audio controls><source src="https://assets.mixkit.co/active_storage/sfx/1018/1018-preview.mp3"></audio>
-            <br><img src="https://cdn-icons-png.flaticon.com/128/3159/3159424.png" class="icon-small" alt="under construction">
-        </section>
-    </div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Giant_Anteater_12.jpg/640px-Giant_Anteater_12.jpg" alt="Anteater">
 
-    <footer>
-        <a href="#top" class="top-link">Back to the top of the page</a>
-    </footer>
+<audio controls>
+<source src="https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3" type="audio/mpeg">
+</audio>
+
+</section>
+
+
+<!-- B -->
+<section id="b" class="card">
+<h3>B is for Bear</h3>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/640px-2010-kodiak-bear-1.jpg" alt="Bear">
+
+<audio controls>
+<source src="https://assets.mixkit.co/active_storage/sfx/2232/2232-preview.mp3" type="audio/mpeg">
+</audio>
+
+</section>
+
+
+<!-- C -->
+<section id="c" class="card">
+<h3>C is for Cat</h3>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/640px-Cat03.jpg" alt="Cat">
+
+<audio controls>
+<source src="https://assets.mixkit.co/active_storage/sfx/428/428-preview.mp3" type="audio/mpeg">
+</audio>
+
+</section>
+
+
+<!-- D -->
+<section id="d" class="card">
+<h3>D is for Dog</h3>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/German_Shepherd_-_DSC_0346_%2810096362833%29.jpg/640px-German_Shepherd_-_DSC_0346_%2810096362833%29.jpg" alt="Dog">
+
+<audio controls>
+<source src="https://assets.mixkit.co/active_storage/sfx/2230/2230-preview.mp3" type="audio/mpeg">
+</audio>
+
+</section>
+
+
+<!-- E -->
+<section id="e" class="card">
+<h3>E is for Elephant</h3>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/640px-African_Bush_Elephant.jpg" alt="Elephant">
+
+<audio controls>
+<source src="https://assets.mixkit.co/active_storage/sfx/1018/1018-preview.mp3" type="audio/mpeg">
+</audio>
+
+<br>
+<img src="https://cdn-icons-png.flaticon.com/128/3159/3159424.png" class="icon-small" alt="icon">
+
+</section>
+
+</div>
+
+<footer>
+<a href="#top" class="top-link">Back to the top of the page</a>
+</footer>
 
 </body>
 </html>
