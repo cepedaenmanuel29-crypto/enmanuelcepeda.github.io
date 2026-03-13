@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Alphabet - A to E</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/1864/1864474.png">
+    
+    <style>
+        body {
+            font-family: 'Fredoka One', cursive;
+            text-align: center;
+            background-color: #fdfdfd;
+            margin: 0; padding: 20px;
+        }
+
+        /* Nav sin subrayado y con hover que cambia de color */
+        nav { margin-bottom: 30px; font-size: 24px; }
+        nav a {
+            text-decoration: none; /* Requisito: Sin subrayado */
+            color: #333;
+            padding: 5px 15px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffde59; /* Requisito: Cambio de color al pasar el mouse */
+            border-radius: 10px;
+        }
+
+        /* GRID LAYOUT: 3 celdas por fila */
+        .animal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Requisito: 3 celdas por fila */
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border: 3px solid #eee;
+            border-radius: 20px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card img { width: 100%; border-radius: 10px; margin: 10px 0; }
+        
+        .construction-icon { width: 50px !important; }
+
+        footer { margin-top: 50px; padding-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+    <nav id="top">
+        <a href="#animal-a">A</a> | <a href="#animal-b">B</a> | <a href="#animal-c">C</a> | <a href="#animal-d">D</a> | <a href="#animal-e">E</a>
+    </nav>
+
+    <div class="animal-grid">
+        <section id="animal-a" class="card">
+            <h2>Anteater</h2>
+            <img src="https://placehold.co/300x200?text=Anteater+Image" alt="Anteater">
+            <audio controls style="width: 100%;">
+                <source src="tu-audio.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </section>
+
+        <section id="animal-b" class="card">
+            <h2>Bear</h2>
+            <img src="https://placehold.co/300x200?text=Bear+Image" alt="Bear">
+            <img src="https://cdn-icons-png.flaticon.com/128/3159/3159424.png" class="construction-icon" alt="Under Construction">
+        </section>
+
+        </div>
+
+    <footer>
+        <a href="#top">Back to top of the page</a>
+    </footer>
+
+</body>
+</html>
