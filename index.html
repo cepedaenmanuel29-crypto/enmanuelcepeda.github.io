@@ -2,70 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project Dashboard</title>
+    <title>Main Project Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff; /* light blue background */
+            background-color: #f0f8ff;
             color: #333;
-            padding: 20px;
+            padding: 40px;
         }
 
         h1 {
             text-align: center;
-            color: #003366;
-            margin-bottom: 40px;
-        }
-
-        section {
-            padding: 20px;
             margin-bottom: 30px;
-            border-radius: 8px;
-        }
-
-        /* Different colors for each section */
-        #microgrid {
-            background-color: #e6f0ff; /* light blue */
-        }
-
-        #lab {
-            background-color: #e6ffe6; /* light green */
-        }
-
-        #ch1 {
-            background-color: #fffbe6; /* light yellow */
         }
 
         h2 {
-            margin-top: 0;
+            margin-top: 40px;
+            color: #003366;
         }
 
-        p {
-            line-height: 1.5;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+    <h1>Main Project Dashboard</h1>
 
-    <h1>Project Dashboard</h1>
+    <!-- Individual HTML files -->
+    <h2>General HTML Files</h2>
+    <ul>
+        <li><a href="hello.html" target="_blank">hello.html</a></li>
+        <li><a href="valentineGreeting.html" target="_blank">valentineGreeting.html</a></li>
+    </ul>
 
-    <!-- Microgrid Section -->
-    <section id="microgrid">
-        <h2>Microgrid Project</h2>
-        <p>This is the Microgrid section. Add your content and images here.</p>
-    </section>
+    <!-- Lab HTML files -->
+    <h2>Lab</h2>
+    <ul>
+        <li><a href="electricPowerHistory.html" target="_blank">electricPowerHistory.html</a></li>
+        <li><a href="lawerenceHydropower.html" target="_blank">lawerenceHydropower.html</a></li>
+    </ul>
 
-    <!-- Lab Section -->
-    <section id="lab">
-        <h2>Lab Project</h2>
-        <p>This is the Lab section. Add your content and images here.</p>
-    </section>
+    <!-- Microgrid HTML files -->
+    <h2>Microgrid</h2>
+    <ul>
+        <li><a href="microgrid/index.html" target="_blank">Microgrid Index</a></li>
+    </ul>
 
-    <!-- Chapter 1 Section -->
-    <section id="ch1">
-        <h2>Chapter 1</h2>
-        <p>This is Chapter 1 section. Add your content and images here.</p>
-    </section>
-
+    <!-- Pages -->
+    <h2>Pages</h2>
+    <ul>
+        <li><a href="pages/EnmanuelCepeda_foodPyramid.html" target="_blank">EnmanuelCepeda_foodPyramid.html</a></li>
+        <li><a href="pages/animalAlphabet.html" target="_blank">animalAlphabet.html</a></li>
+        <li><a href="pages/areaDescription.html" target="_blank">areaDescription.html</a></li>
+        <li><a href="pages/typicalPropertyfirstIt.html" target="_blank">typicalPropertyfirstIt.html</a></li>
+        <li><a href="pages/weather.html" target="_blank">weather.html</a></li>
+    </ul>
 </body>
 </html>
