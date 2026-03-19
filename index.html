@@ -1,102 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Project</title>
+    <style>
+        /* General body style */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            text-align: center;
+            padding: 40px;
+        }
 
-<title>Emmanuel Cepeda Web Projects</title>
+        /* Page title */
+        h1 {
+            color: #333366;
+            margin-bottom: 50px;
+        }
 
-<style>
+        /* Buttons for folders */
+        .folder-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px 35px;
+            background-color: #6666ff;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
 
-body{
-font-family:Arial;
-margin:0;
-background:#f2f2f2;
-}
+        /* Hover effect */
+        .folder-link:hover {
+            background-color: #4444cc;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
 
-header{
-background:#1e3a5f;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-nav{
-background:#2f5d8c;
-padding:15px;
-text-align:center;
-}
-
-nav a{
-display:inline-block;
-background:#3f78b4;
-color:white;
-padding:10px 15px;
-margin:5px;
-text-decoration:none;
-border-radius:6px;
-font-weight:bold;
-}
-
-nav a:hover{
-background:#1e3a5f;
-}
-
-#page{
-width:100%;
-height:650px;
-border:none;
-background:white;
-}
-
-</style>
-
+        /* Footer text */
+        footer {
+            margin-top: 60px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
 </head>
-
 <body>
+    <h1>HTML Project Dashboard</h1>
 
-<header>
-<h1>Emmanuel Cepeda Web Development</h1>
-<p>All Assignments</p>
-</header>
+    <!-- Links to each folder HTML -->
+    <a class="folder-link" href="microgrid/microgrid.html">Microgrid</a>
+    <a class="folder-link" href="lab/lab.html">Lab</a>
+    <a class="folder-link" href="ch1/ch1.html">Chapter 1</a>
 
-<nav>
-
-<a href="ch1/hello.html" target="page">Hello Page</a>
-
-<a href="ch1/valentineGreeting.html" target="page">
-Valentine Greeting
-</a>
-
-<a href="lab/electricPowerHistory.html" target="page">
-Electric Power History
-</a>
-
-<a href="lab/lawrenceHydropower.html" target="page">
-Lawrence Hydropower
-</a>
-
-<a href="microgrid/pages/areaDescription.html" target="page">
-Area Description
-</a>
-
-<a href="microgrid/pages/weather.html" target="page">
-Weather
-</a>
-
-<a href="microgrid/pages/typicalPropertyfirstlt.html" target="page">
-Typical Property
-</a>
-
-<a href="microgrid/pages/animalAlphabet.html" target="page">
-Animal Alphabet
-</a>
-
-<a href="microgrid/pages/EmmanuelCepeda_foodPyramid.html" target="page">
-Food Pyramid
-</a>
-
-</nav>
-
-<iframe id="page" name="page" src="microgrid/pages/areaDescription.html"></iframe>
-
+    <footer>
+        All projects organized for easy access
+    </footer>
 </body>
 </html>
