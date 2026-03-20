@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>River Trail</title>
+<title>Kansas Mountain Bike Trails</title>
 
 <style>
 
 body{
     font-family: Georgia, serif;
     margin:0;
+    background:#f4f4f4;
 }
 
-/* Header image */
+/* Header */
+header{
+    text-align:center;
+    background:white;
+}
+
 header img{
     width:100%;
+    height:300px;
+    object-fit:cover;
 }
 
-/* Title */
 header h1{
-    text-align:center;
-    margin-top:10px;
+    margin:10px 0 0 0;
+    color:#333;
 }
 
 header p{
-    text-align:center;
-    font-style:italic;
+    margin-bottom:20px;
+    color:#666;
 }
 
 /* Layout */
 main{
     display:flex;
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
+    background:white;
 }
 
 /* Navigation */
 nav{
-    width:150px;
-    padding:15px;
+    width:180px;
+    padding:20px;
+    background:#fafafa;
+    border-right:1px solid #ddd;
 }
 
 nav ul{
-    list-style-type:none;
+    list-style:none;
     padding:0;
 }
 
 nav li{
     margin-bottom:10px;
+    color:#444;
 }
 
 /* Main content */
@@ -55,19 +67,45 @@ section{
     padding:20px;
 }
 
+section img{
+    width:100%;
+    border-radius:6px;
+    margin-bottom:15px;
+}
+
 /* Aside rules */
 aside{
     flex:1;
     padding:20px;
-    background:#f2f2f2;
-    border-left:3px solid #999;
+    background:#f0f6ff;
+    border-left:2px solid #ccc;
+}
+
+aside h3{
+    margin-top:0;
+}
+
+aside ol{
+    padding-left:20px;
 }
 
 /* Hide aside on small screens */
-@media screen and (max-width:800px){
-    aside{
-        display:none;
-    }
+@media screen and (max-width:900px){
+
+main{
+flex-direction:column;
+}
+
+aside{
+display:none;
+}
+
+nav{
+width:100%;
+border-right:none;
+border-bottom:1px solid #ddd;
+}
+
 }
 
 </style>
@@ -77,7 +115,7 @@ aside{
 
 <header>
 
-<img src="bikeTrail.jpg" alt="Bike Trail">
+<img src="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1b" alt="Mountain Bike">
 
 <h1>Kansas Mountain Bike Trails</h1>
 
@@ -88,41 +126,48 @@ aside{
 <main>
 
 <nav>
+
 <ul>
 <li>Lawrence River</li>
 <li>Wyandotte County Lake</li>
 <li>Shawnee Mission Park</li>
 <li>Switchgrass</li>
 </ul>
+
 </nav>
 
 <section>
 
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="River Trail">
+
 <h2>Lawrence River Trail</h2>
 
 <p>
-Meandering along the Kaw River, the River Trail is a wooded ten-mile single-lane
+Meandering along the Kaw River, the River Trail is a wooded ten-mile single lane
 loop located in North Lawrence. It's rated easy, but there are plenty of tight
-turns, rocks, logs, and poisonous snakes to keep you on your toes.
+turns, rocks, logs, and obstacles to keep riders alert and enjoying the ride.
 </p>
 
-<h3>Directions:</h3>
+<h3>Directions</h3>
 
 <p>
 On the north side of the Mass Street Bridge, go east on Elm Street.
-Turn right on 8th Street, look for the trailhead, and park.
+Turn right on 8th Street and look for the trailhead parking area.
+From there you can start your adventure along the scenic river trail.
 </p>
 
 </section>
 
 <aside>
 
-<h3>Trail Rules:</h3>
+<h3>Trail Rules</h3>
 
 <ol>
 <li>Only ride when the trail is open.</li>
-<li>Riders go clockwise, hikers go other direction.</li>
+<li>Riders go clockwise; hikers go the opposite direction.</li>
 <li>Hikers yield to riders.</li>
+<li>Stay on marked trails.</li>
+<li>Respect wildlife and nature.</li>
 </ol>
 
 </aside>
@@ -130,4 +175,5 @@ Turn right on 8th Street, look for the trailhead, and park.
 </main>
 
 </body>
+
 </html>
