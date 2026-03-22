@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentence Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="document.getElementById('wordInput').focus()">
+
+    <noscript>
+        <div style="color: red; border: 2px solid red; padding: 10px; text-align: center;">
+            <strong>WARNING:</strong> This page requires JavaScript to function. Please enable it.
+        </div>
+    </noscript>
+
+    <div class="container">
+        <h1>Sentence Builder</h1>
+        
+        <div id="sentenceDisplay" class="cursive-text"></div>
+
+        <form id="builderForm">
+            <p id="promptText">Starting word for your sentence:</p>
+            <input type="text" id="wordInput" autocomplete="off">
+            <br><br>
+            <button type="button" onclick="addWord()">Add Word</button>
+            <button type="button" onclick="startOver()">Start Over</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
