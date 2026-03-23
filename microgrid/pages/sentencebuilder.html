@@ -3,30 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Sentence Builder</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background: white;
+            border: 2px solid #333;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 450px;
+        }
+
+        /* Requisito: Reddish (rojizo), Largish (grande) y Cursive (cursiva) */
+        #displayArea {
+            font-family: 'Dancing Script', cursive; 
+            font-size: 32px;
+            color: #d32f2f; /* Rojo oscuro */
+            min-height: 60px;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+        }
+
+        input {
+            padding: 8px;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+            border: 2px solid red;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-<body onload="document.getElementById('wordInput').focus()">
+<body onload="positionCursor()">
 
     <noscript>
-        <div style="color: red; border: 2px solid red; padding: 10px; text-align: center;">
-            <strong>WARNING:</strong> This page requires JavaScript to function. Please enable it.
+        <div class="warning">
+            WARNING: This browser does not have JavaScript enabled. This page will not work!
         </div>
     </noscript>
 
     <div class="container">
         <h1>Sentence Builder</h1>
-        
-        <div id="sentenceDisplay" class="cursive-text"></div>
+
+        <div id="displayArea"></div>
 
         <form id="builderForm">
-            <p id="promptText">Starting word for your sentence:</p>
+            <label id="promptLabel" for="wordInput">Starting word for your sentence:</label><br><br>
             <input type="text" id="wordInput" autocomplete="off">
-            <br><br>
+            <br>
             <button type="button" onclick="addWord()">Add Word</button>
             <button type="button" onclick="startOver()">Start Over</button>
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Función para poner el cursor siempre en el cuadro de texto
+        function positionCursor() {
+            document.getElementById("wordInput").focus();
+        }
+
+        function addWord() {
+            // Variables locales (Requisito)
+            let inputField = document.getElementById("wordInput");
+            let display = document.getElementById("displayArea");
+            let label = document.getElementById("promptLabel");
+            let word = inputField.value.trim();
+
+            // Validación: Si está vacío o tiene espacios, no hace nada
+            if (word === "" || word.indexOf(" ") !== -1) {
+                inputField.value = "";
+                positionCursor();
+                return;
+            }
+
+            // Si es la primera palabra
+            if (display.innerText === "") {
+                display.innerText = word;
+                // Cambio de label según la imagen de la tarea
+                label.innerText = "Next word for your sentence:";
+            } else {
+                // Añade espacio y la siguiente palabra
+                display.innerText += " " + word;
+            }
+
+            // Limpiar y poner el cursor de nuevo
+            inputField.value = "";
+            positionCursor();
+        }
+
+        function startOver() {
+            document.getElementById("displayArea").innerText = "";
+            document.getElementById("wordInput").value = "";
+            document.getElementById("promptLabel").innerText = "Starting word for your sentence:";
+            positionCursor();
+        }
+    </script>
 </body>
 </html>
