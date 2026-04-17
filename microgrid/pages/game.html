@@ -9,28 +9,28 @@
             display: block;
             margin: 0 auto;
         }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
 
 <canvas id="myCanvas" width="480" height="320"></canvas>
+<button onclick="restartGame()">Restart Game</button>
 
 <script>
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
-var x = canvas.width/2;
-var y = canvas.height-30;
-var dx = 2;
-var dy = -2;
-var ballRadius = 10;
+var x, y, dx, dy, score, bricks, rightPressed, leftPressed, paddleX;
 
+var ballRadius = 10;
 var paddleHeight = 10;
 var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;
-
-var rightPressed = false;
-var leftPressed = false;
 
 var brickRowCount = 5;
 var brickColumnCount = 3;
@@ -40,18 +40,31 @@ var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 
-var score = 0;
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 
-var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1 };
+function initGame() {
+    x = canvas.width/2;
+    y = canvas.height-30;
+    dx = 2;
+    dy = -2;
+    score = 0;
+    paddleX = (canvas.width-paddleWidth)/2;
+    rightPressed = false;
+    leftPressed = false;
+
+    bricks = [];
+    for(var c=0; c<brickColumnCount; c++) {
+        bricks[c] = [];
+        for(var r=0; r<brickRowCount; r++) {
+            bricks[c][r] = { x: 0, y: 0, status: 1 };
+        }
     }
 }
 
-document.addEventListener("keydown", keyDownHandler);
-document.addEventListener("keyup", keyUpHandler);
+function restartGame() {
+    initGame();
+}
 
 function keyDownHandler(e) {
     if(e.key == "Right" || e.key == "ArrowRight") rightPressed = true;
@@ -73,8 +86,7 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN!");
-                        document.location.reload();
+                        alert("YOU WIN! Press Restart to play again");
                     }
                 }
             }
@@ -134,8 +146,9 @@ function draw() {
     else if(y + dy > canvas.height-ballRadius) {
         if(x > paddleX && x < paddleX + paddleWidth) dy = -dy;
         else {
-            alert("GAME OVER");
-            document.location.reload();
+            alert("GAME OVER - Press Restart to play again");
+            dx = 0;
+            dy = 0;
         }
     }
 
@@ -148,6 +161,7 @@ function draw() {
     requestAnimationFrame(draw);
 }
 
+initGame();
 draw();
 </script>
 
